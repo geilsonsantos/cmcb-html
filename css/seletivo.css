@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+:root{
+    --cor1: #FF685E;
+    --cor2: #EB4E42;
+    --cor3: #FF351F;
+    --cor4: #FF2814;
+    --cor5: #E81C07;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 0, 0, 0.267);
+}
+
+header{
+    display: flex;
+    background-color: rgb(238, 48, 48);
+    justify-content: space-between;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.452);
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+li{
+    padding: 15px;
+}
+
+li > a{
+    color: rgba(255, 255, 255, 0.788);
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo img{
+    width: 100px;
+    padding-left: 20px;
+}
+
+.logo h3{
+    color: white;
+    margin-left: 10px;
+}
+.menu{
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.788);
+    position: absolute;
+    font-size: 36px;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+li a:hover,
+.menu:hover{
+    cursor: pointer;
+    color: #fdfdfd;
+
+}
+
+.menu:focus ~ ul{
+    height: 260px;
+}
+
+@media (max-width: 700px) {
+    header, ul, .logo{
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    ul{
+        text-align: center;
+        margin: 0;
+        height: 0;
+    }
+
+    li a{
+        padding-bottom: 100px;
+    }
+
+    header{
+        padding-top: 20px;
+    }
+
+    .menu{
+        display: flex;
+        padding: 50px 20px;
+    }
+
+    li, ul{
+        width: 100%;
+    }
+}
+
+.image-top{
+    align-items: center;
+    text-align: center;
+}
+ 
+.image-top img{
+     width: 700px;
+     margin: 20px auto;
+     padding: 20px;
+     align-items: center;
+     text-align: center;
+}
+ 
+main{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    min-width: 300px;
+    max-width: 1000px;
+    background-color: #fff;  
+    margin: auto;  
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(252, 2, 2, 0.479);
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}   
+h1{
+    color: var(--cor4);
+    text-align: center;
+}
+
+.media-footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+}
